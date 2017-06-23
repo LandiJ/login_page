@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+
+{{#user}}
+    <h3>Logged in as {{user.username}}</h3>
+    {{/user}} {{^user}}
+    <h3>No User logged in</h3>
+    {{/user}}
+    <h3>
+    <h1>Log in!</h1>
+    <form action="/login" method="post">
+        <input type="text" name="username" class="box" placeholder="username">
+        <input type="password" name="password" class="box"  placeholder="password">
+        <input type="submit" class="submit">
+    </form>
+
+
+
+
+</body>
+
+</html>
